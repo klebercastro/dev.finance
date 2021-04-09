@@ -246,7 +246,7 @@ td.expense {
 #form .input-group {
     margin-top: .8rem;
 }
-#form .input-group small {
+#form .input-group small .help {
     opacity: 0.4;
 }
 
