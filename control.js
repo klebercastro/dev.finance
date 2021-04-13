@@ -24,7 +24,7 @@ const Storage = {
         return JSON.parse(localStorage.getItem('dev.finances:transaction')) || [];
     },
     set(transactions) {
-        localStorage.setItem('dev.finances:trasanction', JSON.stringify(transactions));
+        localStorage.setItem('dev.finances:transaction', JSON.stringify(transactions));
     }
 }
 
@@ -120,9 +120,9 @@ const DOM = {
 
 const Utils = {
      formatAmount(value) {
-        value = Number(value.replace(/\,\./g, "")) * 100
+        value = value * 100;
 
-        return value;
+        return Math.round(value);
     },
 
     formatDate(date) {
